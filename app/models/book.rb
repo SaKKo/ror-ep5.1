@@ -9,6 +9,8 @@
 #
 
 class Book < ApplicationRecord
+  validates :name, presence: true
+
   def id_and_name
     "#{self.id} #{self.name}"
   end
